@@ -34,7 +34,7 @@ export function Leaderboard() {
             } animate-once animate-duration-[800ms] animate-delay-300 animate-ease-in-out`}
           >
             <Image
-              src="/placeholder.svg?height=400&width=400"
+              src="/images/leaderboard.png"
               alt="Leaderboard"
               width={400}
               height={400}
@@ -48,7 +48,7 @@ export function Leaderboard() {
           >
             <ul role="list" className="mt-8 space-y-8 text-muted-foreground">
               <li className="flex gap-x-3">
-                <span className="mt-1 h-5 w-5 flex-none rounded-full bg-primary" />
+                <span className="mt-1 h-5 w-5 flex-none rounded-full bg-black" />
                 <span>
                   <strong className="font-semibold text-foreground">
                     Knowledge Sharing:
@@ -58,7 +58,7 @@ export function Leaderboard() {
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <span className="mt-1 h-5 w-5 flex-none rounded-full bg-primary" />
+                <span className="mt-1 h-5 w-5 flex-none rounded-full bg-black" />
                 <span>
                   <strong className="font-semibold text-foreground">
                     Helping Others:
@@ -68,7 +68,7 @@ export function Leaderboard() {
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <span className="mt-1 h-5 w-5 flex-none rounded-full bg-primary" />
+                <span className="mt-1 h-5 w-5 flex-none rounded-full bg-black" />
                 <span>
                   <strong className="font-semibold text-foreground">
                     Collaborative Projects:
@@ -78,7 +78,10 @@ export function Leaderboard() {
                 </span>
               </li>
             </ul>
-            <Button className="mt-8" size="lg">
+            <Button
+              className="mt-8 text-white bg-black hover:bg-black/80"
+              size="lg"
+            >
               View Full Leaderboard
             </Button>
           </div>

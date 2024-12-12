@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { auth } from "@/auth";
 
-export default function Hero() {
+export default async function Hero() {
+  const session = await auth();
   return (
     <div className="relative overflow-hidden bg-background">
       <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
@@ -10,9 +12,15 @@ export default function Hero() {
         <div className="py-12 md:py-20">
           <header className="flex justify-between items-center mb-16">
             <div className="text-2xl font-bold">Ksscode</div>
-            <Button asChild variant="outline">
-              <Link href="/signin">Sign In</Link>
-            </Button>
+            {session && session?.user ? (
+              <Button asChild variant="outline">
+                <Link href="/dashboard">Dashboard</Link>
+              </Button>
+            ) : (
+              <Button asChild variant="outline">
+                <Link href="/signin">Sign In</Link>
+              </Button>
+            )}
           </header>
 
           {/* Hero Content */}

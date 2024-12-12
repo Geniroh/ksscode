@@ -37,7 +37,7 @@ export function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2
-            className={`text-base font-semibold leading-7 text-primary ${
+            className={`text-base leading-7 font-light ${
               isInView ? "animate-fade-up" : "opacity-0"
             } animate-once animate-duration-[800ms] animate-ease-in-out`}
           >
@@ -70,7 +70,7 @@ export function Features() {
                 style={{ animationDelay: `${(index + 1) * 100 + 200}ms` }}
               >
                 <dt className="text-base font-semibold leading-7">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black">
                     <feature.icon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"

@@ -32,7 +32,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2
-            className={`text-base font-semibold leading-7 text-primary ${
+            className={`text-base font-light leading-7 ${
               isInView ? "animate-fade-up" : "opacity-0"
             } animate-once animate-duration-[800ms] animate-ease-in-out`}
           >
@@ -65,7 +65,7 @@ export function HowItWorks() {
                 style={{ animationDelay: `${(stepIdx + 1) * 100 + 200}ms` }}
               >
                 <div className="flex items-center mb-2">
-                  <span className="absolute left-0 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-medium text-primary-foreground">
+                  <span className="absolute left-0 flex h-8 w-8 items-center justify-center rounded-full bg-black text-sm font-medium text-white">
                     {stepIdx + 1}
                   </span>
                   <h3 className="text-base font-semibold leading-7">
